@@ -1,94 +1,403 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Para el amor de mi vida ❤️</title>
+<title>Para el amor de mi vida ❤️</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+*{
+    box-sizing:border-box;
+}
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Georgia, "Times New Roman", serif;
-            background: linear-gradient(135deg, #ffdde6, #fff5f8, #ffd1dc);
-            color: #5a1830;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+body{
+    margin:0;
+    background:linear-gradient(135deg,#fff8fb,#ffe5ee,#fff8fb);
+    color:#4a2633;
+    font-family:Arial,sans-serif;
+    text-align:center;
+}
 
-        .corazones {
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            overflow: hidden;
-            z-index: 0;
-        }
+.card{
+    max-width:700px;
+    margin:25px auto;
+    padding:30px;
+    border:3px solid #f8a9c4;
+    border-radius:22px;
+    background:rgba(255,255,255,.95);
+    box-shadow:0 8px 25px rgba(180,50,90,.15);
+}
 
-        .corazon {
-            position: absolute;
-            color: rgba(214, 40, 90, 0.25);
-            font-size: 25px;
-            animation: flotar 8s linear infinite;
-        }
+h1,h2{
+    color:#8e2146;
+}
 
-        .corazon:nth-child(1) {
-            left: 10%;
-            animation-delay: 0s;
-        }
+h1{
+    font-size:38px;
+}
 
-        .corazon:nth-child(2) {
-            left: 25%;
-            animation-delay: 2s;
-        }
+h2{
+    font-size:28px;
+}
 
-        .corazon:nth-child(3) {
-            left: 45%;
-            animation-delay: 4s;
-        }
+h3{
+    color:#8e2146;
+}
 
-        .corazon:nth-child(4) {
-            left: 65%;
-            animation-delay: 1s;
-        }
+.pink{
+    color:#e94f7a;
+}
 
-        .corazon:nth-child(5) {
-            left: 85%;
-            animation-delay: 3s;
-        }
+.corazon{
+    font-size:55px;
+    margin-bottom:5px;
+}
 
-        @keyframes flotar {
-            0% {
-                transform: translateY(110vh) scale(0.8);
-                opacity: 0;
-            }
+.texto{
+    font-size:18px;
+    line-height:1.7;
+}
 
-            20% {
-                opacity: 1;
-            }
+.contador{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-top:20px;
+}
 
-            100% {
-                transform: translateY(-20vh) scale(1.3);
-                opacity: 0;
-            }
-        }
+.numero{
+    background:#fff0f5;
+    border:2px solid #f8a9c4;
+    border-radius:15px;
+    padding:15px 5px;
+}
 
-        .contenedor {
-            position: relative;
-            z-index: 1;
-            width: 92%;
-            max-width: 900px;
-            margin: auto;
-            padding: 35px 0;
-        }
+.numero strong{
+    display:block;
+    color:#e94f7a;
+    font-size:28px;
+}
 
-        .tarjeta {
-            background: rgba(255, 255, 255, 0.90);
-            border-radius: 30px;
-            padding: 35px 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 15px 40px rgba(
+.numero span{
+    font-size:13px;
+    color:#8e2146;
+}
+
+.fotos{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:20px;
+}
+
+.fotos img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:16px;
+    border:3px solid #e94f7a;
+}
+
+.btn{
+    display:inline-block;
+    background:#e94f7a;
+    color:white;
+    padding:16px 25px;
+    border-radius:18px;
+    font-weight:bold;
+    text-decoration:none;
+    margin-top:10px;
+    font-size:17px;
+}
+
+.btn:hover{
+    background:#c93661;
+}
+
+.final{
+    font-size:24px;
+    color:#e94f7a;
+    font-weight:bold;
+}
+
+@media(max-width:600px){
+
+    .card{
+        margin:15px;
+        padding:22px;
+    }
+
+    h1{
+        font-size:31px;
+    }
+
+    h2{
+        font-size:25px;
+    }
+
+    .texto{
+        font-size:17px;
+    }
+
+    .contador{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .fotos{
+        grid-template-columns:1fr;
+    }
+
+    .fotos img{
+        height:auto;
+        max-height:500px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PORTADA -->
+
+<div class="card">
+
+<div class="corazon">❤️</div>
+
+<h1>Nuestro amor</h1>
+
+<p class="pink">
+Una pequeña parte de todo lo que siento por vos ❤️
+</p>
+
+<h3>JUNTOS DESDE</h3>
+
+<h2>07 de agosto de 2026</h2>
+
+<div class="contador">
+
+<div class="numero">
+<strong id="diasJuntos">0</strong>
+<span>DÍAS JUNTOS</span>
+</div>
+
+<div class="numero">
+<strong id="mesesJuntos">0</strong>
+<span>MESES</span>
+</div>
+
+<div class="numero">
+<strong id="diasAnio">0</strong>
+<span>DÍAS PARA 1 AÑO</span>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRIMER MENSAJE -->
+
+<div class="card">
+
+<h2>Para vos, mi amor ❤️</h2>
+
+<div class="texto">
+
+<p>
+Te amo demasiado y lo sabes. Sos el amor de mi vida.
+Yo volví con vos porque sabía que esto iba a funcionar
+y realmente no me arrepiento.
+</p>
+
+<p>
+Vamos por los 2 meses y espero que sean muchísimos más
+meses, días y años a tu lado.
+</p>
+
+<p>
+Espero que dentro de no mucho tiempo podamos cumplir
+algunas de las metas que sabemos que queremos, mi amor.
+</p>
+
+<p>
+Sabés todo. Te lo digo todos los días:
+<strong class="pink">te amo un montón ❤️</strong>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- LO QUE QUIERO VIVIR CON VOS -->
+
+<div class="card">
+
+<h2>Lo que quiero vivir con vos ❤️</h2>
+
+<div class="texto">
+
+<p>
+Yo con vos quiero la vida entera,
+quiero una familia, quiero casarme,
+quiero todo.
+</p>
+
+<p>
+Vos no te das una idea de lo feliz que estoy
+cada vez que estoy con vos,
+cada vez que hacemos cosas juntos.
+</p>
+
+<p>
+Cada besito que te doy, cada abrazo,
+me llena toda el alma.
+</p>
+
+<p>
+Y ni hablar de cuando lo haces vos:
+ahí se me llena la panza de mariposas.
+</p>
+
+<p>
+Quiero que sepas que realmente quiero
+estar con vos para siempre.
+</p>
+
+<p>
+<strong class="pink">
+Te amo muchísimo. ❤️
+</strong>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- FOTOS -->
+
+<div class="card">
+
+<h2>Nuestros recuerdos ❤️</h2>
+
+<p class="pink">
+Vos y yo. Siempre. ❤️
+</p>
+
+<div class="fotos">
+
+<img src="foto1.jpg" alt="Nuestro recuerdo">
+
+<img src="foto2.jpg" alt="Nuestro recuerdo">
+
+<img src="foto3.jpg" alt="Nuestro recuerdo">
+
+<img src="foto4.jpg" alt="Nuestro recuerdo">
+
+</div>
+
+</div>
+
+
+<!-- CANCIÓN -->
+
+<div class="card">
+
+<h2>Nuestra canción 🎵</h2>
+
+<p class="texto">
+Poné la canción y volvé a mirar estas fotos. ❤️
+</p>
+
+<a
+class="btn"
+href="https://youtu.be/sfSWbfPfoCk?si=jh3tImrafUTvwHtp"
+target="_blank">
+▶ ESCUCHAR NUESTRA CANCIÓN
+</a>
+
+</div>
+
+
+<!-- FINAL -->
+
+<div class="card">
+
+<div class="corazon">💕</div>
+
+<h2>Y que sean muchos más...</h2>
+
+<div class="texto">
+
+<p>
+Por todos los días que ya vivimos juntos,
+por los que estamos viviendo y por todos
+los que todavía nos quedan.
+</p>
+
+<p class="final">
+Te amo. ❤️
+</p>
+
+<p>
+Con amor, siempre ❤️
+</p>
+
+</div>
+
+</div>
+
+
+<script>
+
+const inicio = new Date("2026-08-07T00:00:00");
+const aniversario = new Date("2027-08-07T00:00:00");
+
+function actualizar(){
+
+    const ahora = new Date();
+
+    const diferencia = ahora - inicio;
+
+    const dias = Math.floor(
+        diferencia / (1000 * 60 * 60 * 24)
+    );
+
+    document.getElementById("diasJuntos").textContent =
+        Math.max(0,dias);
+
+    let meses =
+        (ahora.getFullYear() - inicio.getFullYear()) * 12 +
+        (ahora.getMonth() - inicio.getMonth());
+
+    if(ahora.getDate() < inicio.getDate()){
+        meses--;
+    }
+
+    document.getElementById("mesesJuntos").textContent =
+        Math.max(0,meses);
+
+    const falta =
+        aniversario - ahora;
+
+    const diasFaltan = Math.max(
+        0,
+        Math.ceil(
+            falta / (1000 * 60 * 60 * 24)
+        )
+    );
+
+    document.getElementById("diasAnio").textContent =
+        diasFaltan;
+}
+
+actualizar();
+
+setInterval(actualizar,1000);
+
+</script>
+
+</body>
+</html>
