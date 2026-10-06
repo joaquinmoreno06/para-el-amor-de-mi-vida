@@ -177,18 +177,28 @@ Una pequeña parte de todo lo que siento por vos ❤️
 <div class="contador">
 
 <div class="numero">
-<strong id="diasJuntos">0</strong>
-<span>DÍAS JUNTOS</span>
-</div>
-
-<div class="numero">
 <strong id="mesesJuntos">0</strong>
 <span>MESES</span>
 </div>
 
 <div class="numero">
-<strong id="diasAnio">0</strong>
-<span>DÍAS PARA 1 AÑO</span>
+<strong id="diasJuntos">0</strong>
+<span>DÍAS</span>
+</div>
+
+<div class="numero">
+<strong id="horasJuntos">0</strong>
+<span>HORAS</span>
+</div>
+
+<div class="numero">
+<strong id="minutosJuntos">0</strong>
+<span>MINUTOS</span>
+</div>
+
+<div class="numero">
+<strong id="segundosJuntos">0</strong>
+<span>SEGUNDOS</span>
 </div>
 
 </div>
@@ -350,49 +360,58 @@ Con amor, siempre ❤️
 <script>
 
 const inicio = new Date("2026-08-07T00:00:00");
-const aniversario = new Date("2027-08-07T00:00:00");
 
-function actualizar(){
+function actualizar() {
 
     const ahora = new Date();
-
-    const diferencia = ahora - inicio;
-
-    const dias = Math.floor(
-        diferencia / (1000 * 60 * 60 * 24)
-    );
-
-    document.getElementById("diasJuntos").textContent =
-        Math.max(0,dias);
 
     let meses =
         (ahora.getFullYear() - inicio.getFullYear()) * 12 +
         (ahora.getMonth() - inicio.getMonth());
 
-    if(ahora.getDate() < inicio.getDate()){
+    let fechaMeses = new Date(inicio);
+    fechaMeses.setMonth(fechaMeses.getMonth() + meses);
+
+    if (fechaMeses > ahora) {
         meses--;
+        fechaMeses = new Date(inicio);
+        fechaMeses.setMonth(fechaMeses.getMonth() + meses);
     }
 
-    document.getElementById("mesesJuntos").textContent =
-        Math.max(0,meses);
+    let diferencia = ahora - fechaMeses;
 
-    const falta =
-        aniversario - ahora;
-
-    const diasFaltan = Math.max(
-        0,
-        Math.ceil(
-            falta / (1000 * 60 * 60 * 24)
-        )
+    const dias = Math.floor(
+        diferencia / (1000 * 60 * 60 * 24)
     );
 
-    document.getElementById("diasAnio").textContent =
-        diasFaltan;
+    diferencia -= dias * (1000 * 60 * 60 * 24);
+
+    const horas = Math.floor(
+        diferencia / (1000 * 60 * 60)
+    );
+
+    diferencia -= horas * (1000 * 60 * 60);
+
+    const minutos = Math.floor(
+        diferencia / (1000 * 60)
+    );
+
+    diferencia -= minutos * (1000 * 60);
+
+    const segundos = Math.floor(
+        diferencia / 1000
+    );
+
+    document.getElementById("mesesJuntos").textContent = meses;
+    document.getElementById("diasJuntos").textContent = dias;
+    document.getElementById("horasJuntos").textContent = horas;
+    document.getElementById("minutosJuntos").textContent = minutos;
+    document.getElementById("segundosJuntos").textContent = segundos;
 }
 
 actualizar();
 
-setInterval(actualizar,1000);
+setInterval(actualizar, 1000);
 
 </script>
 
