@@ -38,3 +38,164 @@ h1 {
   font-size: 38px;
   margin: 10px 0;
 }
+.subtitle {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.message {
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.75;
+  margin-top: 25px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+
+.stat {
+  background: rgba(255,255,255,0.16);
+  border-radius: 18px;
+  padding: 15px 20px;
+  min-width: 140px;
+}
+
+.num {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.label {
+  font-size: 14px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 25px;
+  border-radius: 999px;
+  background: white;
+  color: #a31346;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.footer {
+  margin-top: 25px;
+  font-size: 15px;
+  opacity: 0.85;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <div class="heart">❤️</div>
+
+  <h1>Para el amor de mi vida</h1>
+
+  <div class="subtitle">
+    Mi amor, esto es para vos. Por todos los días que vivimos juntos
+    y por todos los que todavía nos quedan.
+  </div>
+
+  <div class="stats">
+
+    <div class="stat">
+      <div class="num" id="days">0</div>
+      <div class="label">días juntos</div>
+    </div>
+
+    <div class="stat">
+      <div class="num" id="remain">0</div>
+      <div class="label">días para 1 año</div>
+    </div>
+
+  </div>
+
+  <div class="message">
+
+    <p>
+      Te amo demasiado y lo sabés. Sos el amor de mi vida.
+      Yo volví con vos porque sabía que esto iba a funcionar
+      y realmente no me arrepiento.
+    </p>
+
+    <p>
+      Vamos por los 2 meses y espero que sean muchísimos más
+      meses, días y años a tu lado. Espero que dentro de no mucho
+      tiempo podamos cumplir algunas de las metas que sabemos
+      que queremos, mi amor.
+    </p>
+
+    <p>
+      Yo con vos quiero la vida entera. Quiero una familia,
+      quiero casarme, quiero todo. Vos no te das una idea de lo
+      feliz que estoy cada vez que estoy con vos, cada vez que
+      hacemos cosas juntos.
+    </p>
+
+    <p>
+      Cada besito que te doy y cada abrazo me llena toda el alma,
+      y ni hablar de cuando lo hacés vos: ahí se me llena la panza
+      de mariposas.
+    </p>
+
+    <p>
+      Quiero que sepas que realmente quiero estar con vos
+      para siempre. ❤️
+    </p>
+
+  </div>
+
+  <a
+    class="button"
+    href="https://youtu.be/sfSWbfPfoCk?si=jh3tImrafUTvwHtp"
+    target="_blank">
+    🎵 Escuchar nuestra música
+  </a>
+
+  <div class="footer">
+    07/08/2026 · Te amo ❤️
+  </div>
+
+</div>
+
+<script>
+
+const inicio = new Date("2026-08-07T00:00:00-03:00");
+const aniversario = new Date("2027-08-07T00:00:00-03:00");
+
+function actualizar() {
+
+  const ahora = new Date();
+
+  const diasJuntos =
+    Math.floor((ahora - inicio) / 86400000);
+
+  const diasRestantes =
+    Math.ceil((aniversario - ahora) / 86400000);
+
+  document.getElementById("days").textContent =
+    Math.max(0, diasJuntos);
+
+  document.getElementById("remain").textContent =
+    Math.max(0, diasRestantes);
+}
+
+actualizar();
+
+setInterval(actualizar, 60000);
+
+</script>
+
+</body>
+</html>
