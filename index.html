@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -6,196 +6,99 @@
 <title>Para el amor de mi vida ❤️</title>
 
 <style>
-* {
-  box-sizing: border-box;
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Georgia,serif;
+  color:white;
+  background:
+    radial-gradient(circle at top,#ffb6c9 0%,transparent 35%),
+    linear-gradient(135deg,#5b1835,#b52b58,#ff8fa8);
+  padding:20px 12px 50px;
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: Georgia, serif;
-  background: linear-gradient(135deg, #3b071c, #8f1239, #ff6f91);
-  color: white;
-  padding: 25px 15px;
+.card{
+  max-width:760px;
+  margin:auto;
+  background:rgba(255,255,255,.13);
+  border:1px solid rgba(255,255,255,.3);
+  border-radius:28px;
+  padding:25px 18px;
+  text-align:center;
+  box-shadow:0 15px 40px rgba(0,0,0,.3);
+  backdrop-filter:blur(8px);
 }
 
-.card {
-  max-width: 720px;
-  margin: auto;
-  padding: 30px 22px;
-  text-align: center;
-  background: rgba(255,255,255,0.13);
-  border: 1px solid rgba(255,255,255,0.25);
-  border-radius: 28px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+h1{
+  font-size:34px;
+  margin:5px 0 10px;
 }
 
-.heart {
-  font-size: 55px;
+h2{
+  margin-top:30px;
 }
 
-h1 {
-  font-size: 38px;
-  margin: 10px 0;
-}
-.subtitle {
-  font-size: 18px;
-  line-height: 1.5;
+.heart{
+  font-size:48px;
+  animation:latido 1.2s infinite;
 }
 
-.message {
-  text-align: left;
-  font-size: 18px;
-  line-height: 1.75;
-  margin-top: 25px;
+@keyframes latido{
+  50%{transform:scale(1.18)}
 }
 
-.stats {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin: 25px 0;
+.subtitle{
+  font-size:18px;
+  opacity:.95;
 }
 
-.stat {
-  background: rgba(255,255,255,0.16);
-  border-radius: 18px;
-  padding: 15px 20px;
-  min-width: 140px;
+.photos{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin:25px 0;
 }
 
-.num {
-  font-size: 30px;
-  font-weight: bold;
+.photos img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  border-radius:20px;
+  border:2px solid rgba(255,255,255,.6);
+  box-shadow:0 8px 20px rgba(0,0,0,.3);
 }
 
-.label {
-  font-size: 14px;
+.box{
+  margin:20px 0;
+  padding:18px 10px;
+  border-radius:22px;
+  background:rgba(0,0,0,.18);
 }
 
-.button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 15px 25px;
-  border-radius: 999px;
-  background: white;
-  color: #a31346;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 17px;
+.counter{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:7px;
+  margin-top:12px;
 }
 
-.footer {
-  margin-top: 25px;
-  font-size: 15px;
-  opacity: 0.85;
-}
-</style>
-</head>
-
-<body>
-
-<div class="card">
-
-  <div class="heart">❤️</div>
-
-  <h1>Para el amor de mi vida</h1>
-
-  <div class="subtitle">
-    Mi amor, esto es para vos. Por todos los días que vivimos juntos
-    y por todos los que todavía nos quedan.
-  </div>
-
-  <div class="stats">
-
-    <div class="stat">
-      <div class="num" id="days">0</div>
-      <div class="label">días juntos</div>
-    </div>
-
-    <div class="stat">
-      <div class="num" id="remain">0</div>
-      <div class="label">días para 1 año</div>
-    </div>
-
-  </div>
-
-  <div class="message">
-
-    <p>
-      Te amo demasiado y lo sabés. Sos el amor de mi vida.
-      Yo volví con vos porque sabía que esto iba a funcionar
-      y realmente no me arrepiento.
-    </p>
-
-    <p>
-      Vamos por los 2 meses y espero que sean muchísimos más
-      meses, días y años a tu lado. Espero que dentro de no mucho
-      tiempo podamos cumplir algunas de las metas que sabemos
-      que queremos, mi amor.
-    </p>
-
-    <p>
-      Yo con vos quiero la vida entera. Quiero una familia,
-      quiero casarme, quiero todo. Vos no te das una idea de lo
-      feliz que estoy cada vez que estoy con vos, cada vez que
-      hacemos cosas juntos.
-    </p>
-
-    <p>
-      Cada besito que te doy y cada abrazo me llena toda el alma,
-      y ni hablar de cuando lo hacés vos: ahí se me llena la panza
-      de mariposas.
-    </p>
-
-    <p>
-      Quiero que sepas que realmente quiero estar con vos
-      para siempre. ❤️
-    </p>
-
-  </div>
-
-  <a
-    class="button"
-    href="https://youtu.be/sfSWbfPfoCk?si=jh3tImrafUTvwHtp"
-    target="_blank">
-    🎵 Escuchar nuestra música
-  </a>
-
-  <div class="footer">
-    07/08/2026 · Te amo ❤️
-  </div>
-
-</div>
-
-<script>
-
-const inicio = new Date("2026-08-07T00:00:00-03:00");
-const aniversario = new Date("2027-08-07T00:00:00-03:00");
-
-function actualizar() {
-
-  const ahora = new Date();
-
-  const diasJuntos =
-    Math.floor((ahora - inicio) / 86400000);
-
-  const diasRestantes =
-    Math.ceil((aniversario - ahora) / 86400000);
-
-  document.getElementById("days").textContent =
-    Math.max(0, diasJuntos);
-
-  document.getElementById("remain").textContent =
-    Math.max(0, diasRestantes);
+.number{
+  font-size:25px;
+  font-weight:bold;
 }
 
-actualizar();
+.label{
+  font-size:11px;
+  opacity:.85;
+}
 
-setInterval(actualizar, 60000);
+.letter{
+  text-align:left;
+  line-height:1.7;
+  font-size:17px;
+}
 
-</script>
-
-</body>
-</html>
+.music{
+ 
