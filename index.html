@@ -3,210 +3,171 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Para el amor de mi vida ❤️</title>
 
 <style>
-*{
-    box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
-    margin:0;
-    background:linear-gradient(135deg,#fff8fb,#ffe5ee,#fff8fb);
-    color:#4a2633;
-    font-family:Arial,sans-serif;
-    text-align:center;
+margin:0;
+background:linear-gradient(135deg,#fff8fb,#ffe5ee,#fff8fb);
+color:#4a2633;
+font-family:Arial,sans-serif;
+text-align:center;
 }
 
 .card{
-    max-width:700px;
-    margin:25px auto;
-    padding:30px;
-    border:3px solid #f8a9c4;
-    border-radius:22px;
-    background:rgba(255,255,255,.95);
-    box-shadow:0 8px 25px rgba(180,50,90,.15);
+max-width:700px;
+margin:25px auto;
+padding:30px;
+border:3px solid #f8a9c4;
+border-radius:22px;
+background:rgba(255,255,255,.95);
+box-shadow:0 8px 25px rgba(180,50,90,.15);
 }
 
-h1,h2{
-    color:#8e2146;
-}
+h1,h2,h3{color:#8e2146}
+h1{font-size:38px}
+h2{font-size:28px}
 
-h1{
-    font-size:38px;
-}
-
-h2{
-    font-size:28px;
-}
-
-h3{
-    color:#8e2146;
-}
-
-.pink{
-    color:#e94f7a;
-}
-
-.corazon{
-    font-size:55px;
-    margin-bottom:5px;
-}
+.pink{color:#e94f7a}
+.corazon{font-size:55px}
 
 .texto{
-    font-size:18px;
-    line-height:1.7;
+font-size:18px;
+line-height:1.7;
 }
 
 .contador{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:10px;
-    margin-top:20px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+margin-top:20px;
 }
 
 .numero{
-    background:#fff0f5;
-    border:2px solid #f8a9c4;
-    border-radius:15px;
-    padding:15px 5px;
+background:#fff0f5;
+border:2px solid #f8a9c4;
+border-radius:15px;
+padding:15px 5px;
 }
 
 .numero strong{
-    display:block;
-    color:#e94f7a;
-    font-size:28px;
+display:block;
+color:#e94f7a;
+font-size:28px;
 }
 
 .numero span{
-    font-size:13px;
-    color:#8e2146;
+font-size:13px;
+color:#8e2146;
 }
 
 .fotos{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-    margin-top:20px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-top:20px;
 }
 
 .fotos img{
-    width:100%;
-    height:320px;
-    object-fit:cover;
-    border-radius:16px;
-    border:3px solid #e94f7a;
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:16px;
+border:3px solid #e94f7a;
 }
 
 .btn{
-    display:inline-block;
-    background:#e94f7a;
-    color:white;
-    padding:16px 25px;
-    border-radius:18px;
-    font-weight:bold;
-    text-decoration:none;
-    margin-top:10px;
-    font-size:17px;
-}
-
-.btn:hover{
-    background:#c93661;
+display:inline-block;
+background:#e94f7a;
+color:white;
+padding:16px 25px;
+border-radius:18px;
+font-weight:bold;
+text-decoration:none;
+margin-top:10px;
+font-size:17px;
 }
 
 .final{
-    font-size:24px;
-    color:#e94f7a;
-    font-weight:bold;
+font-size:24px;
+color:#e94f7a;
+font-weight:bold;
 }
 
 @media(max-width:600px){
-
-    .card{
-        margin:15px;
-        padding:22px;
-    }
-
-    h1{
-        font-size:31px;
-    }
-
-    h2{
-        font-size:25px;
-    }
-
-    .texto{
-        font-size:17px;
-    }
-
-    .contador{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .fotos{
-        grid-template-columns:1fr;
-    }
-
-    .fotos img{
-        height:auto;
-        max-height:500px;
-    }
+.card{margin:15px;padding:22px}
+h1{font-size:31px}
+h2{font-size:25px}
+.fotos{grid-template-columns:1fr}
+.fotos img{height:auto;max-height:500px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- PORTADA -->
-
 <div class="card">
 
 <div class="corazon">❤️</div>
 
-<h1>Nuestro amor</h1>
-
-<p class="pink">
-Una pequeña parte de todo lo que siento por vos ❤️
+<p class="pink" style="font-size:20px;font-weight:bold;">
+UNA PEQUEÑA PARTE DE TODO LO QUE SIENTO POR VOS
 </p>
 
-<h3>JUNTOS DESDE</h3>
+<h1>Para el amor de mi vida</h1>
 
-<h2>07 de agosto de 2026</h2>
+<p style="font-size:21px;">
+Nuestro comienzo: <strong>07 de agosto de 2026</strong>
+</p>
+
+<div class="card">
+<h3>LLEVAMOS</h3>
+<strong id="llevamos" style="font-size:48px;color:#e94f7a;">0</strong>
+<p>días juntos</p>
+</div>
+
+<div class="card">
+
+<h3>FALTAN</h3>
+
+<strong id="faltan" style="font-size:48px;color:#e94f7a;">0</strong>
+
+<p>días para nuestro primer año</p>
 
 <div class="contador">
 
 <div class="numero">
-<strong id="mesesJuntos">0</strong>
-<span>MESES</span>
+<strong id="dias">0</strong>
+<span>DÍAS PARA EL AÑO</span>
 </div>
 
 <div class="numero">
-<strong id="diasJuntos">0</strong>
-<span>DÍAS</span>
-</div>
-
-<div class="numero">
-<strong id="horasJuntos">0</strong>
+<strong id="horas">00</strong>
 <span>HORAS</span>
 </div>
 
 <div class="numero">
-<strong id="minutosJuntos">0</strong>
+<strong id="minutos">00</strong>
 <span>MINUTOS</span>
 </div>
 
 <div class="numero">
-<strong id="segundosJuntos">0</strong>
+<strong id="segundos">00</strong>
 <span>SEGUNDOS</span>
 </div>
 
 </div>
 
+<p class="pink">
+Se actualiza solo, segundo a segundo. ❤️
+</p>
+
 </div>
 
+</div>
 
-<!-- PRIMER MENSAJE -->
 
 <div class="card">
 
@@ -239,8 +200,6 @@ Sabés todo. Te lo digo todos los días:
 
 </div>
 
-
-<!-- LO QUE QUIERO VIVIR CON VOS -->
 
 <div class="card">
 
@@ -276,39 +235,31 @@ estar con vos para siempre.
 </p>
 
 <p>
-<strong class="pink">
-Te amo muchísimo. ❤️
-</strong>
+<strong class="pink">Te amo muchísimo. ❤️</strong>
 </p>
 
 </div>
 
 </div>
 
-
-<!-- FOTOS -->
 
 <div class="card">
 
 <h2>Nuestros recuerdos ❤️</h2>
 
-<p class="pink">
-Vos y yo. Siempre. ❤️
-</p>
+<p class="pink">Vos y yo. Siempre. ❤️</p>
 
 <div class="fotos">
 
-<img src="foto1.png" alt="Nuestro recuerdo">
-<img src="foto2.png" alt="Nuestro recuerdo">
-<img src="foto3.png" alt="Nuestro recuerdo">
-<img src="foto4.png" alt="Nuestro recuerdo">
+<img src="foto1.png">
+<img src="foto2.png">
+<img src="foto3.png">
+<img src="foto4.png">
 
 </div>
 
 </div>
 
-
-<!-- CANCIÓN -->
 
 <div class="card">
 
@@ -318,17 +269,16 @@ Vos y yo. Siempre. ❤️
 Poné la canción y volvé a mirar estas fotos. ❤️
 </p>
 
-<a
-class="btn"
+<a class="btn"
 href="https://youtu.be/sfSWbfPfoCk?si=jh3tImrafUTvwHtp"
 target="_blank">
+
 ▶ ESCUCHAR NUESTRA CANCIÓN
+
 </a>
 
 </div>
 
-
-<!-- FINAL -->
 
 <div class="card">
 
@@ -360,58 +310,62 @@ Con amor, siempre ❤️
 <script>
 
 const inicio = new Date("2026-08-07T00:00:00");
+const primerAnio = new Date("2027-08-07T00:00:00");
 
-function actualizar() {
+function actualizar(){
 
-    const ahora = new Date();
+const ahora = new Date();
 
-    let meses =
-        (ahora.getFullYear() - inicio.getFullYear()) * 12 +
-        (ahora.getMonth() - inicio.getMonth());
+const total = ahora - inicio;
 
-    let fechaMeses = new Date(inicio);
-    fechaMeses.setMonth(fechaMeses.getMonth() + meses);
+const llevamosDias =
+Math.floor(total / (1000*60*60*24));
 
-    if (fechaMeses > ahora) {
-        meses--;
-        fechaMeses = new Date(inicio);
-        fechaMeses.setMonth(fechaMeses.getMonth() + meses);
-    }
+let falta = primerAnio - ahora;
 
-    let diferencia = ahora - fechaMeses;
+if(falta < 0) falta = 0;
 
-    const dias = Math.floor(
-        diferencia / (1000 * 60 * 60 * 24)
-    );
+const dias =
+Math.floor(falta / (1000*60*60*24));
 
-    diferencia -= dias * (1000 * 60 * 60 * 24);
+falta -= dias*(1000*60*60*24);
 
-    const horas = Math.floor(
-        diferencia / (1000 * 60 * 60)
-    );
+const horas =
+Math.floor(falta / (1000*60*60));
 
-    diferencia -= horas * (1000 * 60 * 60);
+falta -= horas*(1000*60*60);
 
-    const minutos = Math.floor(
-        diferencia / (1000 * 60)
-    );
+const minutos =
+Math.floor(falta / (1000*60));
 
-    diferencia -= minutos * (1000 * 60);
+falta -= minutos*(1000*60);
 
-    const segundos = Math.floor(
-        diferencia / 1000
-    );
+const segundos =
+Math.floor(falta / 1000);
 
-    document.getElementById("mesesJuntos").textContent = meses;
-    document.getElementById("diasJuntos").textContent = dias;
-    document.getElementById("horasJuntos").textContent = horas;
-    document.getElementById("minutosJuntos").textContent = minutos;
-    document.getElementById("segundosJuntos").textContent = segundos;
+document.getElementById("llevamos").textContent =
+llevamosDias;
+
+document.getElementById("faltan").textContent =
+dias;
+
+document.getElementById("dias").textContent =
+dias;
+
+document.getElementById("horas").textContent =
+String(horas).padStart(2,"0");
+
+document.getElementById("minutos").textContent =
+String(minutos).padStart(2,"0");
+
+document.getElementById("segundos").textContent =
+String(segundos).padStart(2,"0");
+
 }
 
 actualizar();
 
-setInterval(actualizar, 1000);
+setInterval(actualizar,1000);
 
 </script>
 
